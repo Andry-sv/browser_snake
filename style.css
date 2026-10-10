@@ -1,0 +1,119 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background-color: rgb(203, 211, 211);
+}
+
+dialog {
+    background-color: #73aa73;
+    color: rgb(234, 233, 255);
+    border-color: #599259;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.502);
+  backdrop-filter: blur(3px);
+}
+
+#winMessage, #defeatMessage {
+    width: 250px;
+    text-align: center;
+}
+
+#winMessage div, #defeatMessage div {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#winMessage button, #defeatMessage button {
+    height: 30px;
+    font-size: medium;
+    background-color: #599259;
+    color: #eae9ff;
+    border: 1px solid #84d8bc;
+    border-radius: 5px;
+}
+
+#canvas {
+    background: #f8f8ff; 
+    border: 3px solid #a7e6a7; 
+    border-radius: 15px;
+}
+
+#gameMenu button {
+    transition: transform 0.2s ease;
+}
+
+#gameMenu button:active {
+    transform: scale(0.90);
+}
+
+#gameMenu form {
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+#gameMenu #sizeBox {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#gameMenu #sizeBox button {
+    font-size: small;
+    height: 50px;
+    width: 50px;
+    background-color: #a7e6a7;
+    color: white;
+    border: 2px solid #e3fdb3;
+    cursor: pointer;
+}
+
+#gameMenu #sizeBox .activ, #gameMenu #modeBox .activ {
+    border: 2px solid #7fffd4;
+}
+
+#gameMenu #modeBox {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#gameMenu #modeBox img {
+    height: 60px;
+    width: 60px;
+}
+
+#gameMenu #modeBox button {
+    height: 64px;
+    width: 64px;
+    padding: 0;
+    background-color: #a7e6a7;
+    color: white;
+    border: 2px solid #e3fdb3;
+    cursor: pointer;
+}
+
+#gameMenu #snakeSpeed {
+    height: 30px;
+    width: 80%;
+    margin: 0 auto 10px;
+}
+
+#gameMenu button {
+    font-size: medium;
+    color: white;
+    background-color: #70c470;
+    border: 2px solid aquamarine;
+    cursor: pointer;
+}

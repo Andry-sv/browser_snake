@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Змейка</title>
+        <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <canvas id="canvas"></canvas>
+            <br>
+        </div>
+
+        <dialog id="winMessage">
+        <form method="dialog">
+            <h2>&#127881;Вы победили&#127881;</h2>
+            <div>
+            <button value="1">меню</button>
+            <button value="0">перезапустить</button>
+            </div>
+        </form>
+        </dialog>
+
+        <dialog id="defeatMessage">
+        <form method="dialog">
+            <h2>&#128557;Вы проиграли&#128557;</h2>
+            <h4>Ваш счет: <span id="currentScore">0</span></h4>
+            <div>
+            <button value="1">меню</button>
+            <button value="0">перезапустить</button>
+            </div>
+        </form>
+        </dialog>
+
+        <dialog id="gameMenu">
+        <form method="dialog">
+            <div style="display: flexbox; margin: 0;">
+            <label>громкость звуков: <span id="viewSound">&#128266;</span></label>
+            <input id="currentSound" type="range" step="0.02" min="0.0" max="1.0" value="0.5">
+            </div>
+            <h4>Выберите размер поля</h4>
+            <div id="sizeBox">
+                <button type="button" value="4" class="">4x4</button>
+                <button type="button" value="6" class="activ">6x6</button>
+                <button type="button" value="8" class="">8x8</button>
+                <button type="button" value="12" class="">12x12</button>
+                <button type="button" value="16" class="">16x16</button>
+            </div>
+            <label>Выбранная скорость движения: <span id="viewSpeed">1.0</span></label>
+            <input id="currentSpeed" type="range" step="0.2" min="0.4" max="4.0" value="1.0">
+            <div id="modeBox">
+                <button type="button" value="standart" title="стандартный режим" class="activ"><img src="./assets/icons/standart.png"></button>
+                <button type="button" value="manyApples" title="три яблока" class=""><img src="./assets/icons/many_apples.png"></button>
+                <button type="button" value="portal" title="телепорт через яблоки" class=""><img src="./assets/icons/portal.png"></button>
+                <button type="button" value="safeWall" title="прохождение сквозь стены" class=""><img src="./assets/icons/safe_wall.png"></button>
+            </div>
+            <button id="start" value="0">начать игру</button>
+        </form>
+        </dialog>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
